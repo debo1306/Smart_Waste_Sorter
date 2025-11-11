@@ -1,0 +1,205 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(120deg, #4c669f, #3b5998, #192f6a);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.score-board {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: inline-flex;
+    gap: 40px;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.bins-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.bin {
+    /* UPDATED: Changed from 45% to 31% to fit three bins */
+    width: 31%;
+    min-height: 180px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+}
+
+#wet-waste-bin {
+    background: linear-gradient(135deg, #5CB85C, #4CAF50);
+}
+
+#dry-waste-bin {
+    background: linear-gradient(135deg, #5BC0DE, #03A9F4);
+}
+
+/* NEW: Added style for the E-Waste bin */
+#e-waste-bin {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+
+/* UPDATED FILTER FOR BIN ICONS */
+.bin-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    /* If the icon you choose is already white, you can remove this filter.
+       If it's black on transparent, this will turn it white. */
+    filter: invert(100%) brightness(1.8);
+    /* This effectively makes black icons white */
+}
+
+.bin-text-content {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.bin h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.bin p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.bin.drag-over {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 3px dashed rgba(255, 255, 255, 0.8);
+}
+
+
+.items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    min-height: 100px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.waste-item {
+    width: 100px;
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.waste-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.waste-item span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.waste-item.dragging {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+#reset-btn {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#reset-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#feedback-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 25px;
+    margin: -10px 0 15px 0;
+    transition: opacity 0.5s ease;
+}
+
+#feedback-message.correct {
+    color: #2ecc71;
+}
+
+#feedback-message.wrong {
+    color: #e74c3c;
+}
+
+/* This new rule targets ONLY the icon in the wet waste bin */
+#wet-waste-bin .bin-icon {
+    filter: none;
+    /* This removes the filter for this icon */
+}

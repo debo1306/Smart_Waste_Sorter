@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Sorter Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+        <h1>Smart Waste Sorter</h1>
+        <p>Drag the waste items into the correct bins!</p>
+
+        <div class="score-board">
+            <span>Score: <b id="score">0</b></span>
+            <span>Attempts: <b id="attempts">0</b></span>
+        </div>
+
+        <div id="feedback-message"></div>
+
+        <div class="bins-container">
+            <div class="bin" id="wet-waste-bin" data-type="wet">
+                <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/social/compost-t2loa8mrk8i3d9umijk22m.png/compost-dbodgon41y8unqkohu81eh.png?_a=DATAg1AAZAA0" alt="Wet Waste Icon" class="bin-icon">
+                <div class="bin-text-content">
+                    <h3>Wet Waste</h3>
+                    <p>Organic waste, food scraps</p>
+                </div>
+            </div>
+
+            <div class="bin" id="dry-waste-bin" data-type="dry">
+                <img src="https://cdn-icons-png.flaticon.com/512/2619/2619623.png" alt="Dry Waste Icon" class="bin-icon">
+                <div class="bin-text-content">
+                    <h3>Dry Waste</h3>
+                    <p>Paper, plastic, metal</p>
+                </div>
+            </div>
+
+            <div class="bin" id="e-waste-bin" data-type="e-waste">
+                <img src="https://cdn-icons-png.flaticon.com/512/3097/3097410.png" alt="E-Waste Icon" class="bin-icon">
+                <div class="bin-text-content">
+                    <h3>E-Waste</h3>
+                    <p>Electronics, batteries</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="items-container" id="items-container">
+        </div>
+
+        <button id="reset-btn">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+
+</html>
