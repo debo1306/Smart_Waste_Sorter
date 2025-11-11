@@ -60,7 +60,7 @@ This part is simple and can be run in 30 seconds.
 **\[!\] IMPORTANT:** The complete, functional Android project (including the 77MB AI model) is **too large for GitHub.** We have hosted the final, zipped project on Google Drive.
 
 1.  **Download the Project:**
-    * [**Click here to download the `Hackss.zip` file from Google Drive.**](https://paste-your-google-drive-link-here)
+    * [**Click here to download the `Hackss.zip` file from Google Drive.**](https://drive.google.com/file/d/1ylVgxwj5k3Wlq80id03lewHXuNPqijUQ/view)
     *(This is a clean, single `.zip` file containing the complete Android Studio project.)*
 
 2.  **Unzip and Open:**
