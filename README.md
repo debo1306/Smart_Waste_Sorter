@@ -79,6 +79,12 @@ This part is simple and can be run in 30 seconds.
     * Tap the "Scan Waste" (or camera) button.
     * The app will take a picture, the AI model will analyze it, and the screen will display the result: **"Wet Waste"** or **"Dry Waste"**.
 
+## 🧠 AI Model Training
+   We trained our custom image classification model using TensorFlow and Keras. You can view the full training process, including data preprocessing and model architecture, in our Google Colab notebook:
+   
+   [**View Training Notebook on Google Colab**](https://colab.research.google.com/drive/1rHsLDyOnvKoe_GjijLY843wT7lXUq-I)
+
+
 ---
 
 ## 💻 Tech Stack
